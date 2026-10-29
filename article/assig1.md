@@ -1,15 +1,15 @@
 # **SYSTEM REQUEST**
 
-|  |  |
-| --- | --- |
-| **Project Sponsor** | Ekonaldi Hutabarat — Technical Lead proyek Platform Integrasi dan API Management, PT Mitra Integrasi Informatika (PT MII) |
-| **Target Organization** | Klien PT Mitra Integrasi Informatika yaitu organisasi enterprise berskala besar pengguna Platform Integrasi dan API Management. Identitas, sektor industri, serta seluruh atribut yang dapat mengidentifikasi organisasi tersebut disamarkan sesuai ketentuan Perjanjian Kerahasiaan (NDA) dan selanjutnya disebut "Klien". |
-| **Prepared by** | Sarah H M Siahaan (NPM 2606846241) |
-| **Document Classification** | Internal — PT Mitra Integrasi Informatika (identitas Klien disamarkan sesuai NDA) |
+|                             |                                                                                                                                                                                                                                                                                                                             |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Project Sponsor**         | Ekonaldi Hutabarat — Technical Lead proyek Platform Integrasi dan API Management, PT Mitra Integrasi Informatika (PT MII)                                                                                                                                                                                                   |
+| **Target Organization**     | Klien PT Mitra Integrasi Informatika yaitu organisasi enterprise berskala besar pengguna Platform Integrasi dan API Management. Identitas, sektor industri, serta seluruh atribut yang dapat mengidentifikasi organisasi tersebut disamarkan sesuai ketentuan Perjanjian Kerahasiaan (NDA) dan selanjutnya disebut "Klien". |
+| **Prepared by**             | Sarah H M Siahaan (NPM 2606846241)                                                                                                                                                                                                                                                                                          |
+| **Document Classification** | Internal — PT Mitra Integrasi Informatika (identitas Klien disamarkan sesuai NDA)                                                                                                                                                                                                                                           |
 
 # **1. Project Sponsor**
 
-*Figure 1 Identitas Project Sponsor*
+_Figure 1 Identitas Project Sponsor_
 
 Proyek ini disponsori oleh Ekonaldi Hutabarat, Technical Lead pada proyek Platform Integrasi dan API Management yang dikerjakan PT Mitra Integrasi Informatika (MII) untuk Klien. Sebagaimana disampaikan pada wawancara (Appendix B — Transkrip Wawancara), beliau memimpin sisi teknis proyek yang mencakup arsitektur sistem, pembagian kerja tim developer, dan keputusan atas teknologi yang digunakan. Setiap usulan perubahan maupun penambahan tooling pada lingkungan pengembangan harus melalui persetujuan beliau sebelum diteruskan ke manajemen MII dan ke Klien, sehingga beliau memiliki otoritas yang relevan untuk menyetujui adopsi teknologi baru guna mengatasi bottleneck pada fase pengujian (testing) dan peluncuran (deployment).
 
@@ -146,7 +146,7 @@ Kajian literatur dilakukan atas tiga poin pencarian: (i) bukti akademis bahwa Di
 
 Bagian ini memuat bukti pendukung penyusunan System Request sesuai ketentuan tugas: daftar pertanyaan wawancara (Appendix A), transkrip lengkap hasil wawancara (Appendix B), dan tautan berkas rekaman (Appendix C). Identitas organisasi Klien disamarkan sesuai ketentuan Perjanjian Kerahasiaan (NDA).
 
-## **Appendix A:  Daftar Pertanyaan Wawancara**
+## **Appendix A: Daftar Pertanyaan Wawancara**
 
 Daftar pertanyaan berikut disusun sebelum sesi perekaman dan dikirimkan kepada narasumber. Fokus wawancara dibatasi pada penggalian akar masalah; usulan solusi tidak dibahas dalam sesi ini.
 
@@ -163,7 +163,7 @@ Daftar pertanyaan berikut disusun sebelum sesi perekaman dan dikirimkan kepada n
 
 Catatan protokol: pada awal sesi narasumber dimintai persetujuan atas perekaman percakapan, batasan kerahasiaan informasi Klien, serta pencantuman identitas dan perannya sebagai project sponsor dalam dokumen tugas ini. Seluruh persetujuan tersebut terekam pada transkrip di Appendix B.
 
-## **Appendix B :  Transkrip Wawancara**
+## **Appendix B : Transkrip Wawancara**
 
 **Nama Pewawancara: Sarah H M Siahaan**
 
@@ -285,7 +285,6 @@ Ekonaldi: Oh, oke oke. Keren-keren. Oke oke. Makasih Pak.
 
 **\[AKHIR TRANSKRIP]**
 
-## **Appendix C :  Berkas Rekaman Wawancara**
+## **Appendix C : Berkas Rekaman Wawancara**
 
 Rekaman audio wawancara dapat diakses melalui tautan berikut: [Rekaman Wawancara.m4a](https://univindonesia-my.sharepoint.com/:u:/g/personal/sarah_h_office_ui_ac_id/IQDRvCu6GUGwRbY5rgfPL-GdAYryGiy17lIcbKpO9v0I3mQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=XkSZFA). Akses tautan telah disetel ke “Anyone with the link can view”. Rekaman dilaksanakan pada 8 September 2026 melalui Zoom dengan durasi 34 menit 35 detik dan telah memperoleh persetujuan narasumber sebagaimana terekam pada Appendix B.
-

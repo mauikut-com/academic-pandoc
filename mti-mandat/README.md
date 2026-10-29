@@ -1,4 +1,5 @@
 Manual style todo:
+
 - border for raci table & crud table
 
 # MTI Mandat — build & content guide
@@ -47,7 +48,7 @@ Inspection targets: `make sections`, `make refs`, `make styles`, `make template`
   :::
   ```
 
-- `figures/gambar1-dummy.png` is a **placeholder** for *Gambar 1* — replace it
+- `figures/gambar1-dummy.png` is a **placeholder** for _Gambar 1_ — replace it
   with the real diagram when ready.
 
 ## Managing references (BibTeX)
@@ -57,10 +58,10 @@ pandoc `--citeproc` using the APA style (`../assets/csl/apa.csl`).
 
 ### Citing in text
 
-| Syntax | Renders as (APA 7) |
-| --- | --- |
-| `[@dama2017]` | (DAMA International, 2017) |
-| `DAMA International [-@dama2017]` | DAMA International (2017) |
+| Syntax                                 | Renders as (APA 7)                                       |
+| -------------------------------------- | -------------------------------------------------------- |
+| `[@dama2017]`                          | (DAMA International, 2017)                               |
+| `DAMA International [-@dama2017]`      | DAMA International (2017)                                |
 | `[@dokumenkoma2025; @dokumenkomb2026]` | (Dokumen KOM Proyek A, 2025; Dokumen KOM Proyek B, 2026) |
 
 - Parenthetical citations use `[@key]`; narrative citations keep the author in
@@ -105,7 +106,7 @@ Add an entry to `references.bib`, then cite it with `[@key]`. Common types:
 Conventions used in this project:
 
 - **Corporate/institutional authors** (e.g. `DAMA International`, `Republik
-  Indonesia`, `Microsoft`) are wrapped in double braces `{{…}}` so they are not
+Indonesia`, `Microsoft`) are wrapped in double braces `{{…}}` so they are not
   parsed as “Surname, Firstname”.
 - **Case protection**: wrap titles in double braces `{{…}}` to keep title case
   and proper nouns (the APA CSL otherwise sentence-cases titles).
@@ -118,16 +119,16 @@ Conventions used in this project:
 
 ### Reference keys
 
-| Key | Source |
-| --- | --- |
-| `abraham2019` | Abraham, Schneider, & vom Brocke (2019) |
-| `cvkaryawan2026` | CV karyawan MII (2026) |
-| `dama2017` | DAMA International (2017) |
-| `dokumenkoma2025` | Dokumen KOM Proyek A (2025) |
-| `dokumenkomb2026` | Dokumen KOM Proyek B (2026) |
-| `microsoft2026a` | Microsoft (2026a) — sensitivity labels |
-| `microsoft2026b` | Microsoft (2026b) — Power Automate |
-| `microsoft2026c` | Microsoft (2026c) — SharePoint |
-| `porter1985` | Porter (1985) |
-| `republikindonesia2022` | Republik Indonesia (2022) — UU PDP |
-| `ward2016` | Ward & Peppard (2016) |
+| Key                     | Source                                  |
+| ----------------------- | --------------------------------------- |
+| `abraham2019`           | Abraham, Schneider, & vom Brocke (2019) |
+| `cvkaryawan2026`        | CV karyawan MII (2026)                  |
+| `dama2017`              | DAMA International (2017)               |
+| `dokumenkoma2025`       | Dokumen KOM Proyek A (2025)             |
+| `dokumenkomb2026`       | Dokumen KOM Proyek B (2026)             |
+| `microsoft2026a`        | Microsoft (2026a) — sensitivity labels  |
+| `microsoft2026b`        | Microsoft (2026b) — Power Automate      |
+| `microsoft2026c`        | Microsoft (2026c) — SharePoint          |
+| `porter1985`            | Porter (1985)                           |
+| `republikindonesia2022` | Republik Indonesia (2022) — UU PDP      |
+| `ward2016`              | Ward & Peppard (2016)                   |

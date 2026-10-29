@@ -18,10 +18,10 @@ aliquam tempor non at nulla.
 
 : Summary of portrait data
 
-| Item  | Q1 | Q2 | Q3 | Q4 |
-|-------|----|----|----|----|
-| Alpha | 10 | 20 | 30 | 40 |
-| Beta  | 11 | 22 | 33 | 44 |
+| Item  | Q1  | Q2  | Q3  | Q4  |
+| ----- | --- | --- | --- | --- |
+| Alpha | 10  | 20  | 30  | 40  |
+| Beta  | 11  | 22  | 33  | 44  |
 
 More portrait text after the table. Ut aliquam tellus ac libero faucibus, sed
 aliquet lorem hendrerit.
@@ -34,11 +34,11 @@ aliquet lorem hendrerit.
 
 : Wide table shown in landscape
 
-| Metric | M1 | M2 | M3 | M4 | M5 | M6 | M7 | M8 |
-|--------|----|----|----|----|----|----|----|----|
-| A | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
-| B | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 |
-| C | 2 | 4 | 6 | 8 | 10 | 12 | 14 | 16 |
+| Metric | M1  | M2  | M3  | M4  | M5  | M6  | M7  | M8  |
+| ------ | --- | --- | --- | --- | --- | --- | --- | --- |
+| A      | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   |
+| B      | 9   | 8   | 7   | 6   | 5   | 4   | 3   | 2   |
+| C      | 2   | 4   | 6   | 8   | 10  | 12  | 14  | 16  |
 
 The landscape section ends here.
 

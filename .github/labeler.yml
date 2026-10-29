@@ -1,9 +1,12 @@
-src:
+project:
   - changed-files:
       - any-glob-to-any-file:
           - .gitattributes
           - .gitignore
-          - src/**/*
+          - package.json
+          - package-lock.json
+          - bun.lock
+          - scripts/**/*
 
 docs:
   - changed-files:

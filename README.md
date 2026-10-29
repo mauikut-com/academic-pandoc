@@ -39,8 +39,8 @@ You can use this template entirely on GitHub, or build the documents locally if 
    - Presentation: [presentation/references.bib](presentation/references.bib)
    - Thesis: [thesis/references.bib](thesis/references.bib)
 5. [Commit your changes](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project).
-6. Open the repository's [Actions](https://github.com/maehr/academic-pandoc-template/actions) tab, select the [Quarto workflow](https://github.com/maehr/academic-pandoc-template/actions/workflows/quarto.yml), and click **Run workflow**.
-7. When the workflow finishes, the rendered files such as PDF, Word, HTML, EPUB, PowerPoint, and TeX are committed back to the repository.
+6. If your repository includes a render workflow, open the repository's **Actions** tab, run it, and wait for it to finish.
+7. When the workflow finishes, the rendered files such as PDF, Word, HTML, EPUB, PowerPoint, and TeX can be committed back to the repository.
 
 You can edit Markdown files [online on GitHub](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github/editing-files-in-your-repository), with [Zettlr](https://www.zettlr.com/), or with another [Markdown editor](https://www.markdownguide.org/tools/). If you are new to Markdown, start with [The Markdown Guide](https://www.markdownguide.org/). You can edit BibTeX references online, with [JabRef](http://www.jabref.org/), or with your favorite BibTeX editor.
 
@@ -122,7 +122,7 @@ npm run format
 
 ## Continuous Integration
 
-The `Quarto` workflow installs npm dependencies, Quarto, and TinyTeX, runs formatting checks, renders all documents with `npm run render`, and commits updated artifacts back to the repository when manually triggered.
+If you enable CI for this template, configure a workflow that installs npm dependencies, Quarto, and TinyTeX, runs formatting checks, and renders documents with `npm run render`.
 
 ## Built With
 
