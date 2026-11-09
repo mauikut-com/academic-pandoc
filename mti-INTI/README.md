@@ -16,8 +16,32 @@ measured in minutes.
 | File | Purpose |
 | --- | --- |
 | `storyboard.md` | The single source: master brief, style bible, shared negative prompt, and seven scene prompts. |
+| `keyframes/` | Intermediate still images: `00-lookdev.md` (style lock) + one start/end frame prompt per scene. |
+| `shots/manifest.yaml` | Machine-readable shot manifest (id, duration, camera, keyframes, seed, status). |
+| `drafts/` | Versioned, first-pass video clips (naming + workflow in `drafts/README.md`). |
+
+## Pipeline
+
+```
+storyboard.md ──(text)→ keyframes/*.md ──(image model)→ keyframes/out/*.png
+      │                                                     │
+      └────────────(derive)→ shots/manifest.yaml ───────────┘
+                                      │
+                                      └──(video model)→ drafts/*.mp4 → final master
+```
+
+1. **Storyboard** — write the scenes in `storyboard.md` (source of truth).
+2. **Keyframes** — generate `00-lookdev` + per-scene start/end frames; these pin
+   the look and motion.
+3. **Manifest** — `shots/manifest.yaml` records each shot's keyframes, seed, and
+   status so re-rolls are tracked.
+4. **Drafts** — generate clips into `drafts/`, log the seed, re-roll only bad scenes.
 
 ## How to feed the prompts
+
+Two paths, both model-agnostic (Veo, Sora, Runway, Kling, Pika, Luma, …).
+
+### Path A — text only
 
 Each scene block is self-contained so you can copy it **on its own** or paste
 the whole deck **in order**.
@@ -29,8 +53,16 @@ the whole deck **in order**.
 4. Copy the shared + scene `Negative prompt` into the model's negative-prompt
    field (where supported).
 
-Works across Veo, Sora, Runway, Kling, Pika, Luma, and similar text-to-video
-tools.
+### Path B — keyframe-conditioned (recommended for consistency)
+
+1. Generate the **look-dev** frame from `keyframes/00-lookdev.md`, then the
+   **start/end** frames for each scene from `keyframes/01-*.md` … `07-*.md`
+   (see `keyframes/README.md` for the exact flow and filenames).
+2. Feed each scene's text `Prompt` **plus** its `keyframe_start`/`keyframe_end`
+   images (from `shots/manifest.yaml`) into an image-to-video model.
+3. Save the output to `drafts/` using `scene-<id>-<seed>-v<version>.mp4`, then
+   log the `seed` and update `status` back in the manifest.
+4. Re-roll only the bad scenes; assemble the `keep` clips into the final master.
 
 ## Conventions
 

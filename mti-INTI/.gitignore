@@ -1,0 +1,7 @@
+# Generated keyframe images — regenerate from keyframes/*.md
+keyframes/out/
+
+# Raw video drafts — large binaries; commit only final masters if you choose to
+drafts/**/*.mp4
+drafts/**/*.mov
+drafts/**/*.webm

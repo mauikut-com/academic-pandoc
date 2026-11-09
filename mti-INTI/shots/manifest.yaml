@@ -1,0 +1,119 @@
+# Machine-readable shot manifest.
+# Derived from storyboard.md — the text storyboard is the source of truth.
+# Keyframe prompts live in keyframes/<id>-*.md; generated PNGs land in
+# keyframes/out/<id>-{start,end}.png.
+meta:
+  title: "Cimory Sales App — Scale-out Storyboard"
+  target: model-agnostic          # Veo / Sora / Runway / Kling / Pika / Luma
+  aspect: "16:9"
+  fps: 24
+  total_duration_s: 72
+  style_ref: storyboard.md#style-bible
+  lookdev_keyframe: keyframes/00-lookdev.md
+  shared_negative: >
+    photorealistic, live action, real human faces, film grain, blurry, low
+    detail, jittery or flickering motion, distorted anatomy, extra fingers,
+    text artifacts, misspelled words, warped logos, watermark, any logo other
+    than Cimory, cluttered composition, harsh flat lighting, washed-out
+    colors, inconsistent scale between objects
+
+shots:
+  - id: "01"
+    title: Hook
+    duration_s: 8
+    goal: Grab attention and pose the central question.
+    camera: Wide shot of a dark void; slow push-in toward a floating phone.
+    prompt_ref: storyboard.md#scene-1---hook
+    keyframe_start: keyframes/out/01-hook-start.png
+    keyframe_end: keyframes/out/01-hook-end.png
+    negative_extra: >
+      no products missing from the orbit; no text on the phone screen; no
+      answer yet — do not show servers
+    seed: null
+    status: todo
+
+  - id: "02"
+    title: Baseline
+    duration_s: 10
+    goal: Establish smooth normal operation: one server, sub-second checkout.
+    camera: Two-up (rack + phone); then a fast tracking shot of the order packet.
+    prompt_ref: storyboard.md#scene-2---baseline
+    keyframe_start: keyframes/out/02-baseline-start.png
+    keyframe_end: keyframes/out/02-baseline-end.png
+    negative_extra: >
+      no red or orange lights; no queue; no other servers — exactly one rack
+    seed: null
+    status: todo
+
+  - id: "03"
+    title: Spike
+    duration_s: 10
+    goal: Show a traffic surge overwhelming the single server.
+    camera: Countdown UI, then a flood of avatars; close-up on the overheating rack.
+    prompt_ref: storyboard.md#scene-3---spike
+    keyframe_start: keyframes/out/03-spike-start.png
+    keyframe_end: keyframes/out/03-spike-end.png
+    negative_extra: >
+      no additional servers appear; the queue does not drain; no green recovery
+      indicators
+    seed: null
+    status: todo
+
+  - id: "04"
+    title: Scale-out
+    duration_s: 12
+    goal: Show horizontal scaling restoring performance.
+    camera: Load balancer appears; rack clones 1→2→4→8; parallel traffic lanes.
+    prompt_ref: storyboard.md#scene-4---scale-out
+    keyframe_start: keyframes/out/04-scale-out-start.png
+    keyframe_end: keyframes/out/04-scale-out-end.png
+    negative_extra: >
+      no removal of servers; no red or orange lights; no vertical scaling (no
+      single machine growing larger)
+    seed: null
+    status: todo
+
+  - id: "05"
+    title: Scale-down (cost-cut → degraded UX in minutes)
+    duration_s: 14
+    goal: >
+      Illustrate that scaling down server capacity trickles down to the
+      end-user experience, worsening over a span of minutes.
+    camera: Racks power off one by one; cut to a customer phone checkout spinner; a timer climbs across minutes.
+    prompt_ref: storyboard.md#scene-5---scale-down-cost-cut--degraded-ux-in-minutes
+    keyframe_start: keyframes/out/05-scale-down-start.png
+    keyframe_end: keyframes/out/05-scale-down-end.png
+    negative_extra: >
+      no new servers appearing; no recovery or green indicators; no sudden jump
+      — the degradation must read as gradual and time-based (minutes); no real
+      human faces
+    seed: null
+    status: todo
+
+  - id: "06"
+    title: Right-sizing / autoscaling
+    duration_s: 10
+    goal: Present the answer: capacity should follow demand automatically.
+    camera: A central gauge and an autoscaler adjusting racks to a demand curve.
+    prompt_ref: storyboard.md#scene-6---right-sizing--autoscaling
+    keyframe_start: keyframes/out/06-right-sizing-start.png
+    keyframe_end: keyframes/out/06-right-sizing-end.png
+    negative_extra: >
+      no overload, no red or orange lights, no abrupt jumps, no real dashboards
+      with readable text beyond the captions
+    seed: null
+    status: todo
+
+  - id: "07"
+    title: Outro
+    duration_s: 8
+    goal: Resolve the story and land the brand.
+    camera: Front-on settle shot of the phone and products; logo and tagline.
+    prompt_ref: storyboard.md#scene-7---outro
+    keyframe_start: keyframes/out/07-outro-start.png
+    keyframe_end: keyframes/out/07-outro-end.png
+    negative_extra: >
+      no red or orange indicators; no cluttered UI; no extra products or
+      competing logos
+    seed: null
+    status: todo
