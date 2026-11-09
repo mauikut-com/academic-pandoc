@@ -1,12 +1,17 @@
 SHELL := /bin/bash
 
-MD   := example.md
+MD   := spec.md
 OUT  := out
 DOCX := $(OUT)/$(MD:.md=.docx)
 
-.PHONY: build sections refs template styles check clean
+SCRIPT := scripts/build_xlsx.py
+
+.PHONY: build xlsx sections refs template styles check clean
 
 build: $(DOCX)
+
+xlsx:
+	python3 $(SCRIPT)
 
 $(OUT)/%.docx: %.md reference.docx landscape.lua
 	@mkdir -p $(OUT)
@@ -54,11 +59,15 @@ styles: build
 check: build
 	@set -u; \
 	DOC="$$(unzip -p $(DOCX) word/document.xml | tr -d '\r\n')"; \
-	echo "=== (a) landscape sectPr present ==="; \
-	if printf '%s' "$$DOC" | grep -q 'w:orient="landscape"'; then echo "OK: landscape pgSz found"; else echo "FAIL: no landscape sectPr"; exit 1; fi; \
+	divs="$$(grep -cE '^::: *landscape *$$' $(MD) || true)"; \
+	echo "=== (a) landscape sectPr present (landscape divs=$$divs) ==="; \
+	if [ "$$divs" -gt 0 ]; then \
+	  if printf '%s' "$$DOC" | grep -q 'w:orient="landscape"'; then echo "OK: landscape pgSz found"; else echo "FAIL: no landscape sectPr"; exit 1; fi; \
+	else \
+	  if printf '%s' "$$DOC" | grep -q 'w:orient="landscape"'; then echo "FAIL: unexpected landscape sectPr"; exit 1; else echo "OK: portrait-only, no landscape expected"; fi; \
+	fi; \
 	echo "=== (b) sectPr count ==="; \
 	n="$$(printf '%s' "$$DOC" | grep -o '<w:sectPr' | wc -l)"; \
-	divs="$$(grep -cE '^::: *landscape *$$' $(MD))"; \
 	exp="$$((1 + 2*divs))"; \
 	echo "sectPr=$$n expected=$$exp (landscape divs=$$divs)"; \
 	if [ "$$n" -eq "$$exp" ]; then echo "OK: sectPr count matches"; else echo "FAIL: sectPr count mismatch"; exit 1; fi; \

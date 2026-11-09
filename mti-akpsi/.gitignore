@@ -1,0 +1,6 @@
+# Generated build artifacts — regenerate from sources (`make xlsx` / `make build`).
+# (The root .gitignore already ignores `out/`; kept here for self-containment.)
+out/
+
+# Scratch/LLM drafts that have not been curated into artifacts/.
+*.tmp

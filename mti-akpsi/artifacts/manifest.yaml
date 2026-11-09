@@ -1,0 +1,71 @@
+# Artifact manifest (machine-readable)
+
+# Derived from spec.md — the canonical spec is the source of truth.
+# Each artifact is generated from a prompt in prompts/<artifact>.md; its LLM
+# output is curated into artifacts/ and its status tracked here
+# (todo -> draft -> keep), mirroring mti-INTI/shots/manifest.yaml.
+
+meta:
+  project: ServerAgent
+  group: Kelompok C6
+  scenario: "Skenario 3 — AI-powered digital twin for the test environment"
+  spec: spec.md
+  language:
+    instructions: English
+    deliverable: Bahasa Indonesia
+
+artifacts:
+  - id: test-plan
+    title: Software Test Plan
+    kind: spreadsheet            # xlsx workbook
+    prompt: prompts/test-plan.md
+    inputs:
+      - spec.md#overview
+      - spec.md#use-cases
+      - spec.md#verdict-rules
+      - spec.md#analysis-engine
+      - spec.md#non-functional-requirements
+      - spec.md#existing-test-strategy--cicd
+    source:
+      plan: out/plan.md
+      test_cases: out/test-cases.csv
+      traceability: out/traceability.csv
+    output: out/Software-Test-Plan.xlsx
+    traceability: UC-01..UC-04, ENG, LLM, SEC, DATA, CI, NFR
+    status: todo
+
+  - id: srs
+    title: Software Requirements Specification
+    kind: document
+    prompt: prompts/srs.md
+    inputs: [spec.md]
+    output: out/ServerAgent-SRS.docx
+    traceability: UC-01..UC-04
+    status: todo
+
+  - id: use-case
+    title: Use-case Specifications
+    kind: document
+    prompt: prompts/use-case.md
+    inputs: [spec.md]
+    output: out/ServerAgent-UseCases.docx
+    traceability: UC-01..UC-04
+    status: todo
+
+  - id: design
+    title: Design / Architecture
+    kind: document
+    prompt: prompts/design.md
+    inputs: [spec.md]
+    output: out/ServerAgent-Design.docx
+    traceability: UC-01..UC-04
+    status: todo
+
+  - id: code
+    title: Source Code (the software itself)
+    kind: code
+    prompt: prompts/code.md
+    inputs: [spec.md]
+    output: mti-akpsi-task/ (branch main)
+    traceability: UC-01..UC-04
+    status: todo
